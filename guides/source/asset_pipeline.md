@@ -222,7 +222,7 @@ following to your `config/application.rb` configuration:
 ### Asset Organization
 
 Pipeline assets can be placed inside an application in one of three locations:
-`app/assets`, `lib/assets` or `vendor/assets`.
+`app/assets`, `lib/assets`, `vendor/assets` or `node_modules`.
 
 * `app/assets` is for assets that are owned by the application, such as custom
 images, JavaScript files or stylesheets.
@@ -234,6 +234,9 @@ scope of the application or those libraries which are shared across applications
 code for JavaScript plugins and CSS frameworks. Keep in mind that third party
 code with references to other files also processed by the asset Pipeline (images,
 stylesheets, etc.), will need to be rewritten to use helpers like `asset_path`.
+
+* `node_modules`  is the place where Yarn stores the npm modules downloaded 
+from npm registry
 
 WARNING: If you are upgrading from Rails 3, please take into account that assets
 under `lib/assets` or `vendor/assets` are available for inclusion via the
